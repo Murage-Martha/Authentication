@@ -10,7 +10,7 @@ if (accessToken) {
     // Store the token in session storage for temporary access
     sessionStorage.setItem("auth_token", accessToken);
     // Redirect to the password vault page or dashboard
-    window.location.href = "passwords.html";
+    window.location.href = "/Pages/passwords.html";
 } else {
     console.error("Access token not found.");
 }
