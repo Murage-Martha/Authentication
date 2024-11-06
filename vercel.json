@@ -1,5 +1,5 @@
 {
-  "routes": [
-    { "src": "/oauth-redirect", "dest": "/OAuth_redirect/oauth-redirect.html" }
+  "rewrites": [
+    { "source": "/oauth-redirect", "destination": "/oauth-redirect.html" }
   ]
 }
