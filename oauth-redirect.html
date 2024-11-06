@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>OAuth Redirect</title>
+    </head>
+    <body>
+        <p>Redirecting, please wait...</p>
+        <script>
+            // Extract the access token from the URL fragment
+            const hashParams = new URLSearchParams(window.location.hash.substring(1));
+            const accessToken = hashParams.get('access_token');
+
+            if (accessToken) {
+                // Redirect to the Chrome extension with the token in the URL
+                window.location.href = `chrome-extension://kepmbpcbfffjeollenmihmhobmgolhbe/Pages/passwords.html#access_token=${accessToken}`;
+            } else {
+                console.error('Access token not found in URL');
+            }
+        </script>
+        <script src="/Authentication/auth.js"></script>
+    </body>
+</html>
